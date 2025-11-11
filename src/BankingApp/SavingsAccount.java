@@ -32,7 +32,7 @@ public class SavingsAccount extends Account{
     }
     @Override
     public void displayAccountInfo(){
-        System.out.println("Saving Account");
+        System.out.println("Account type: Saving Account");
         System.out.println("Account number: " + accountNumber);
         System.out.println("Account holder: " + accountHolder);
         System.out.println("Balance: " + balance);

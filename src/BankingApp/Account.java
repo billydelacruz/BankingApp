@@ -14,9 +14,13 @@ public abstract class Account implements Transactable{
     protected double balance;
 
     public Account(String accountNumber, String accountHolder, double initialBalance) throws InvalidAmountException{
+        this.accountNumber = accountNumber;
+        this.accountHolder = accountHolder;
+        this.balance = initialBalance;
         if(initialBalance < 0) {throw new InvalidAmountException("You have 0 balance/ Initial balance cant be negative");}
 
     }
+
     @Override
     public void deposit(double amount) throws InvalidAmountException{
         validateAmount(amount);
@@ -34,6 +38,7 @@ public abstract class Account implements Transactable{
     public double getBalance(){
         return balance;
     }
+
     public String getAccountNumber(){
         return accountNumber;
     }
